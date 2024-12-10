@@ -8,7 +8,7 @@ import org.mapstruct.*;
 public interface UserMapper {
     User toEntity(ReadUserDTO readUserDTO);
 
-    ReadUserDTO toDto(User user);
+    ReadUserDTO toDTO(User user);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     User partialUpdate(ReadUserDTO readUserDTO, @MappingTarget User user);
